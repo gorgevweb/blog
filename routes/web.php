@@ -20,11 +20,10 @@ Route::group(
     [
         'prefix' => 'super-admin',
         'namespace' => 'Admin',
-        'middleware' => 'admin'
+        'middleware' => 'auth'
     ],
     function () {
 
-        //  ------------  Dashboard --------- //
         Route::get('/', 'PostController@index')->name('admin.index');
         Route::group([], function () {
 
@@ -38,7 +37,7 @@ Route::group(
         });
 
     });
+Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
