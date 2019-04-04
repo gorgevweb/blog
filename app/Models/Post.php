@@ -9,20 +9,16 @@ class Post extends Model
     protected $table = 'posts';
 
     protected $fillable = [
-        'category_id', 'title', 'description', 'image'
+        'category_id', 'title', 'description', 'image','tags'
     ];
     public function category()
     {
-        return $this->belongsTo('App\Models\Category');
+        return $this->belongsTo('App\Models\Category', 'category_id', 'id');
     }
 
-    public function photos()
-    {
-        return $this->hasMany('App\Models\Photo');
-    }
 
-    public function post_tags()
+    public function tags()
     {
-        return $this->hasMany('App\Models\PostTag');
+        return $this->belongsToMany('App\Models\PostTag');
     }
 }

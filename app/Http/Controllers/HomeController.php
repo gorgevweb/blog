@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
+use App\Models\Tag;
 use Illuminate\Contracts\View\Factory;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
 
@@ -22,18 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $category =Category::query()->get();
+        $tags = Tag::query()->get();
         $posts = Post::query()->paginate(3);
-        return view('index', compact('posts'));
+        return view('index', compact('posts','category','tags'));
     }
-
-//    public function login()
-//    {
-//        return view('auth.login');
-//    }
-//    public function register()
-//    {
-//        return view('auth.register');
-//    }
-
 
 }

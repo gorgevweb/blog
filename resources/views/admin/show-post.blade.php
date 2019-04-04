@@ -40,7 +40,7 @@
                                     <tr>
                                         <td>Tags</td>
                                         <td>
-                                            @foreach($post->post_tags as $tag)
+                                            @foreach($post->tags as $tag)
                                                 <span>{{$tag->tag['name']}}</span>
                                             @endforeach
                                         </td>

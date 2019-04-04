@@ -12,7 +12,7 @@ class Tag extends Model
       'name'
     ];
 
-    public function post_tags()
+    public function posts()
     {
         return $this->hasMany('App\Models\PostTag');
     }

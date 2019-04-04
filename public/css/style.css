@@ -3423,6 +3423,7 @@ span.cat i {
 .single-blog-page-area .single-image {
   margin-bottom: 25px;
   overflow: hidden;
+    max-height: 300px;
 }
 .single-blog-page-area .single-image img {
   filter: grayscale(100%);
@@ -4119,7 +4120,7 @@ span.cat i {
   font-size: 18px;
   font-weight: 500;
 }
-.single-team-page-area .single-bio h3 {
+.single-blog-page-area .single-bio h3 {
   color: #d32f2f;
   font-size: 14px;
   font-weight: normal;
@@ -4946,4 +4947,11 @@ span.cat i {
 }
 .mb-30{
     margin-bottom:30px !important;
+}
+.no-first li:first-child{
+    background: white !important;
+    border: 1px solid #ddd !important;
+}
+.no-first li:first-child a{
+    color: #101010 !important;
 }

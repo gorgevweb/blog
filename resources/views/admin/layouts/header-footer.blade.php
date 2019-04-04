@@ -8,8 +8,6 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     <title>Blog task ADMIN</title>
-    <!--favicon-->
-    <link rel="icon" href="{{asset('images/favicon.ico')}}" type="image/x-icon">
     <!-- Vector CSS -->
     <link href="{{asset('admin/plugins/vectormap/jquery-jvectormap-2.0.2.css')}}" rel="stylesheet"/>
     <link href="{{asset('admin/plugins/select2/css/select2.min.css')}}" rel="stylesheet"/>
@@ -19,7 +17,6 @@
     <link href="{{asset('admin/plugins/simplebar/css/simplebar.css')}}" rel="stylesheet"/>
     <!-- Bootstrap core CSS-->
     <link href="{{asset('admin/css/bootstrap.min.css')}}" rel="stylesheet"/>
-{{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-iconpicker/1.10.0/css/bootstrap-iconpicker.min.css">--}}
 <!-- animate CSS-->
     <link href="{{asset('admin/css/animate.css')}}" rel="stylesheet" type="text/css"/>
     <!-- Icons CSS-->
@@ -47,9 +44,6 @@
 
 <body class="bg-theme bg-theme1">
 
-<!-- start loader -->
-<div id="pageloader-overlay" class="visible incoming"><div class="loader-wrapper-outer"><div class="loader-wrapper-inner" ><div class="loader"></div></div></div></div>
-<!-- end loader -->
 
 <!-- Start wrapper-->
 <div id="wrapper">
@@ -106,16 +100,16 @@
                             </a>
                         </li>
                         <li class="dropdown-divider"></li>
-                        {{--<li class="dropdown-item"><a class="dropdown-item" href="{{ route('logout') }}"
+                        <li class="dropdown-item"><a class="dropdown-item" href="{{ route('logout') }}"
                                                      onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
-                                <i class="icon-power mr-2"></i></a></li>--}}
+                                <i class="icon-power mr-2"></i></a></li>
 
                     </ul>
-                  {{--  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
-                    </form>--}}
+                    </form>
                 </li>
             </ul>
         </nav>
